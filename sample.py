@@ -5,9 +5,9 @@ import os
 from dotenv import load_dotenv
 import httpx
 
-load_dotenv()
+load_dotenv(override=True)
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
